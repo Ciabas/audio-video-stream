@@ -21,7 +21,7 @@ wss.on("connection", (ws) => {
     const { type, ...rest } = data;
 
     switch (type) {
-      case "voice":
+      case "to-file":
         {
           appendDataToFile(JSON.stringify(data));
           sendTo(ws, {

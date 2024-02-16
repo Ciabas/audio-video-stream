@@ -31,7 +31,7 @@ function SendingBloBChunks() {
                 const base64data: string = reader.result!.toString();
                 // audio data must be sent as a base64 encoded string
                 sendJsonMessage({
-                  type: "voice",
+                  type: "to-file",
                   audio_data: base64data!.split("base64,")[1],
                 });
               };
